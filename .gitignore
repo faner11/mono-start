@@ -51,3 +51,5 @@ dist-ssr
 .output
 
 tsconfig.tsbuildinfo
+.env
+.env.local
