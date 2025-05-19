@@ -1,0 +1,44 @@
+import { useMutation, useSuspenseQuery } from '@tanstack/react-query'
+import { createFileRoute } from '@tanstack/react-router'
+
+import { useTRPC } from '@/comm'
+
+export const Route = createFileRoute('/')({
+  component: Home,
+  ssr: false,
+})
+
+function Home() {
+  const trpc = useTRPC()
+  const usersQuery = useSuspenseQuery(trpc.users.queryOptions())
+  const addUserMutation = useMutation(
+    trpc.addUser.mutationOptions({
+      onSuccess: async (data) => {
+        console.info('onSuccess', data)
+        await usersQuery.refetch()
+      },
+    }),
+  )
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() => {
+          addUserMutation.mutate({
+            email: `${Date.now().toString()}@example.com`,
+          })
+        }}
+      >
+        button
+      </button>
+      {usersQuery.data.map((user) => (
+        <div key={user.id}>
+          <p>
+            {user.id} - {user.email}
+          </p>
+        </div>
+      ))}
+    </div>
+  )
+}

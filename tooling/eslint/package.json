@@ -1,0 +1,21 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint .",
+    "check-type": "tsc -b --noEmit"
+  },
+  "exports": {
+    ".": "./base.js"
+  },
+  "type": "module",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint-config-biome": "^1.9.4",
+    "eslint-plugin-import-x": "^4.11.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unicorn": "^59.0.1",
+    "typescript-eslint": "^8.32.1"
+  }
+}

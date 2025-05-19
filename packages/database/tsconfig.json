@@ -1,0 +1,10 @@
+{
+  "extends": "@total-typescript/tsconfig/bundler/no-dom/library-monorepo",
+  "include": ["src/*.ts", "./eslint.config.js", "generated/prisma"],
+  "compilerOptions": {
+    "composite": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

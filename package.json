@@ -1,0 +1,32 @@
+{
+  "name": "mono-start",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "check": "biome check --write .",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "biome check && turbo lint",
+    "check-type": "turbo check-type",
+    "db:push": "turbo -F @repo/db db:push",
+    "db:studio": "turbo -F @repo/db db:studio",
+    "db:generate": "turbo -F @repo/db db:generate",
+    "db:migrate": "turbo -F @repo/db db:migrate"
+  },
+  "author": "bob",
+  "license": "MIT",
+  "description": "",
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@repo/eslint-config": "workspace:*",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/node": "^22.15.19",
+    "eslint": "^9.27.0",
+    "turbo": "^2.5.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "zod": "^3.24.4"
+  }
+}

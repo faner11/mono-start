@@ -1,0 +1,19 @@
+{
+  "name": "@repo/api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "check-type": "tsc -b --noEmit"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.ts"
+    }
+  },
+  "description": "",
+  "dependencies": {
+    "@trpc/server": "^11.1.2",
+    "@repo/db": "workspace:*"
+  }
+}

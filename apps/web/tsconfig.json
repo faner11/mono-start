@@ -1,0 +1,12 @@
+{
+  "extends": "@total-typescript/tsconfig/bundler/dom/app",
+  "exclude": ["dist", "node_modules"],
+  "include": ["**/*.ts", "**/*.tsx", "./eslint.config.js"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noImplicitOverride": false,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

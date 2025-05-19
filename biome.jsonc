@@ -1,0 +1,60 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "organizeImports": {
+    "enabled": false
+  },
+  "files": {
+    "ignore": ["dist", ".vscode", ".output", ".vinxi", ".turbo", "generated/prisma"]
+  },
+  "linter": {
+    "enabled": true,
+    "ignore": ["vite-env.d.ts"],
+    "rules": {
+      "a11y": {
+        "useSemanticElements": "off",
+        "noSvgWithoutTitle": "off"
+      },
+      "performance": {
+        "useTopLevelRegex": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noConsole": "off",
+        "noConsoleLog": "error",
+        "noReactSpecificProps": "off"
+      },
+      "nursery": {
+        "all": true,
+        "useImportRestrictions": "off",
+        "noSecrets": "off",
+        "noEnum": "off",
+        "useStrictMode": "off",
+        "useConsistentCurlyBraces": "off",
+        "noProcessEnv": "off",
+        "useComponentExportOnlyModules": "off",
+        "noTemplateCurlyInString": "off",
+        "noNestedTernary": "off",
+        "useExplicitType": "off",
+        "useGuardForIn": "off",
+        "noImgElement": "off",
+        "noHeadElement": "off"
+      },
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedPrivateClassMembers": "error",
+        "noUnusedVariables": "error"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    }
+  }
+}
