@@ -22,7 +22,10 @@ cp .env.example .env
 To facilitate quick start, SQLite is used by default. You need to initialize the SQLite database before starting.
 
 ```bash
-pnpx prisma migrate dev --name init
+# Create the SQLite database
+pnpm run db:push
+# Generate the Prisma client
+pnpm run db:generate
 ```
 If you want to use another database, you can modify the database connection string in `prisma/schema.prisma`.
 ```prisma
