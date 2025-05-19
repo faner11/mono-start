@@ -14,7 +14,10 @@ This project is built using the following technology stack:
 ## React or Vue or Other
 Because this project is based on [@tanstack/start](https://tanstack.com/start/latest), it only supports the front-end frameworks supported by `@tanstack/start`.
 ## Getting Started
-
+### env
+```
+cp .env.example .env
+```
 ### prisma db provider
 To facilitate quick start, SQLite is used by default. You need to initialize the SQLite database before starting.
 
