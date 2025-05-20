@@ -1,7 +1,7 @@
 // import { prisma } from '@repo/db'
 import { prisma } from '@repo/db'
 import { initTRPC } from '@trpc/server'
-import { z } from 'zod'
+import { z } from 'zod/v4'
 export { fetchRequestHandler } from '@trpc/server/adapters/fetch'
 
 const t = initTRPC.create()
