@@ -10,9 +10,10 @@ export const Route = createFileRoute('/')({
 
 function Home() {
   const trpc = useTRPC()
-  const usersQuery = useSuspenseQuery(trpc.users.queryOptions())
+
+  const usersQuery = useSuspenseQuery(trpc.user.users.queryOptions())
   const addUserMutation = useMutation(
-    trpc.addUser.mutationOptions({
+    trpc.user.addUser.mutationOptions({
       onSuccess: async (data) => {
         console.info('onSuccess', data)
         await usersQuery.refetch()
