@@ -1,5 +1,5 @@
 import { prisma } from '@repo/db'
-import { z } from 'zod'
+import { z } from 'zod/v4'
 
 import { publicProcedure } from '@/comm/trpc'
 
