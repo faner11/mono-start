@@ -22,12 +22,12 @@
     "@dotenvx/dotenvx": "^1.44.1",
     "@repo/eslint-config": "workspace:*",
     "@total-typescript/tsconfig": "^1.0.4",
-    "@types/node": "^22.15.19",
+    "@types/node": "^22.15.21",
     "eslint": "^9.27.0",
     "turbo": "^2.5.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "zod": "^3.25.7"
+    "zod": "^3.25.28"
   }
 }

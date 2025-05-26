@@ -28,6 +28,7 @@ function Home() {
         onClick={() => {
           addUserMutation.mutate({
             email: `${Date.now().toString()}@example.com`,
+            gender: 'Man',
           })
         }}
       >

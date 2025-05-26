@@ -9,9 +9,7 @@
     "lint": "eslint .",
     "check-type": "tsc -b --noEmit"
   },
-  "exports": {
-    ".": "./src/index.ts"
-  },
+  "main": "./src/index.ts",
   "devDependencies": {
     "prisma": "^6.8.2"
   },
