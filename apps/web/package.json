@@ -7,7 +7,7 @@
     "build": "vinxi build",
     "start": "vinxi start",
     "lint": "eslint .",
-    "check-type": "tsc -b --noEmit"
+    "check-type": "tsc -b"
   },
   "description": "",
   "dependencies": {

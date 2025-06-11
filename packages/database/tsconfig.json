@@ -3,6 +3,9 @@
   "include": ["src/*.ts", "./eslint.config.js", "generated/prisma", "prisma.config.ts"],
   "compilerOptions": {
     "composite": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "emitDeclarationOnly": true,
     "paths": {
       "@/*": ["./src/*"]
     }

@@ -4,7 +4,6 @@
   "include": ["**/*.ts", "**/*.tsx", "./eslint.config.js"],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "noImplicitOverride": false,
     "paths": {
       "@/*": ["./src/*"]
     }

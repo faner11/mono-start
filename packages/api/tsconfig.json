@@ -1,10 +1,12 @@
 {
   "extends": "@total-typescript/tsconfig/bundler/no-dom/library-monorepo",
   "exclude": ["dist", "node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src"],
   "compilerOptions": {
     "composite": true,
     "noEmit": false,
+    "outDir": "./dist",
+    "emitDeclarationOnly": true,
     "paths": {
       "@/*": ["./src/*"]
     }

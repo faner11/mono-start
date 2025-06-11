@@ -7,7 +7,7 @@
     "db:migrate": "prisma migrate dev --name init",
     "db:push": "prisma db push",
     "lint": "eslint .",
-    "check-type": "tsc -b --noEmit"
+    "check-type": "tsc -b"
   },
   "main": "./src/index.ts",
   "devDependencies": {
