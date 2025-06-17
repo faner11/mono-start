@@ -4,10 +4,10 @@
     "enabled": false
   },
   "files": {
-    "ignore": ["dist", ".vscode", ".output", ".vinxi", ".turbo", "generated/prisma"]
+    "ignore": ["dist", ".vscode", ".output", ".turbo", "generated/prisma"]
   },
   "linter": {
-    "enabled": true,
+    "enabled": false,
     "ignore": ["vite-env.d.ts"],
     "rules": {
       "a11y": {

@@ -1,8 +1,7 @@
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports.biome": "explicit",
-    "quickfix.biome": "explicit"
+    "source.fixAll.oxc": "explicit"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "biomejs.biome",
@@ -37,6 +36,7 @@
     "Continuar",
     "gcapi",
     "klavi",
+    "oxlint",
     "Statsig"
   ],
   "files.watcherExclude": {

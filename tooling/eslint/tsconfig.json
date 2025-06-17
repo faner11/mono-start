@@ -1,6 +1,6 @@
 {
   "extends": "@total-typescript/tsconfig/bundler/no-dom/library-monorepo",
-  "include": ["./base.js"],
+  "include": ["eslint.config.js"],
   "compilerOptions": {
     "allowJs": true
   }

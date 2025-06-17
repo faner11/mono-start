@@ -47,7 +47,6 @@ dist-ssr
 *.sln
 *.sw?
 .eslintcache
-.vinxi
 .output
 
 tsconfig.tsbuildinfo
