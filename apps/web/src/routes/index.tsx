@@ -5,12 +5,10 @@ import { useTRPC } from '@/comm'
 
 export const Route = createFileRoute('/')({
   component: Home,
-  ssr: false,
 })
 
 function Home() {
   const trpc = useTRPC()
-
   const usersQuery = useSuspenseQuery(trpc.user.users.queryOptions())
   const addUserMutation = useMutation(
     trpc.user.addUser.mutationOptions({

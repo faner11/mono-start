@@ -21,7 +21,6 @@ export const Route = createRootRoute({
   }),
   notFoundComponent: () => <div>Not Found</div>,
   component: RootComponent,
-  ssr: false,
 })
 
 function RootComponent() {

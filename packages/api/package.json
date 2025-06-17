@@ -13,7 +13,7 @@
   },
   "description": "",
   "dependencies": {
-    "@trpc/server": "^11.1.2",
-    "@repo/db": "workspace:*"
+    "@repo/db": "workspace:*",
+    "@trpc/server": "^11.4.1"
   }
 }

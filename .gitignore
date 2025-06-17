@@ -53,3 +53,6 @@ dist-ssr
 tsconfig.tsbuildinfo
 .env
 .env.local
+
+.tanstack
+.nitro
