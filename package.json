@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "check": "biome check --write .",
+    "check": "pnpm run lint && biome check",
     "dev": "dotenvx run -- turbo dev",
     "build": "turbo build",
     "lint": "oxlint . && turbo lint",
@@ -11,8 +11,7 @@
     "db:push": "dotenvx run -- turbo -F @repo/db db:push",
     "db:studio": "dotenvx run -- turbo -F @repo/db db:studio",
     "db:generate": "turbo -F @repo/db db:generate",
-    "db:migrate": "dotenvx run -- turbo -F @repo/db db:migrate",
-    "oxlint": "oxlint ."
+    "db:migrate": "dotenvx run -- turbo -F @repo/db db:migrate"
   },
   "author": "bob",
   "license": "MIT",
