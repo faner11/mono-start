@@ -12,11 +12,9 @@
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.29.0",
+    "eslint-plugin-oxlint": "^1.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unicorn": "^59.0.1",
     "typescript-eslint": "^8.34.1"
-  },
-  "dependencies": {
-    "eslint-plugin-oxlint": "^1.1.0"
   }
 }

@@ -106,14 +106,13 @@ importers:
         version: 6.9.0(typescript@5.8.3)
 
   tooling/eslint:
-    dependencies:
-      eslint-plugin-oxlint:
-        specifier: ^1.1.0
-        version: 1.1.0
     devDependencies:
       '@eslint/js':
         specifier: ^9.29.0
         version: 9.29.0
+      eslint-plugin-oxlint:
+        specifier: ^1.1.0
+        version: 1.1.0
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.29.0(jiti@2.4.2))
