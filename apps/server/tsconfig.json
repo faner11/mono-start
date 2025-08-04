@@ -1,0 +1,13 @@
+{
+  "extends": "@total-typescript/tsconfig/bundler/no-dom/app",
+  "exclude": ["dist", "node_modules", "types"],
+  "include": ["."],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "outDir": "./types",
+    "declarationMap": true,
+    "erasableSyntaxOnly": true,
+    "emitDeclarationOnly": true
+  }
+}

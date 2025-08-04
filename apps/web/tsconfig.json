@@ -4,13 +4,11 @@
   "include": ["**/*.ts", "**/*.tsx", "./eslint.config.js"],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "types": []
   },
   "references": [
     {
-      "path": "../../packages/api"
+      "path": "../server/tsconfig.json"
     }
   ]
 }

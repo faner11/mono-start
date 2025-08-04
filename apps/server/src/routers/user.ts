@@ -1,7 +1,8 @@
 import { GenderEnum, prisma } from '@repo/db'
 import { z } from 'zod/v4'
 
-import { publicProcedure } from '@/comm/trpc'
+import { publicProcedure } from '#comm'
+
 export const usersRouter = {
   users: publicProcedure.query(async () => {
     return await prisma.user.findMany()

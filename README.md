@@ -18,14 +18,16 @@ Because this project is based on [@tanstack/start](https://tanstack.com/start/la
 ```
 cp .env.example .env
 ```
+
 ### install
 
 ```bash
 pnpm i
 ```
-
 ### prisma db provider
 To facilitate quick start, SQLite is used by default. You need to initialize the SQLite database before starting.
+
+If you use sqlite, please change DATABASE_URL in `.env` to your own absolute address
 
 ```bash
 # Create the SQLite database

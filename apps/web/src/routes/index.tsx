@@ -1,12 +1,11 @@
 import { useMutation, useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
 
-import { useTRPC } from '@/comm'
+import { useTRPC } from '#comm'
 
 export const Route = createFileRoute('/')({
   component: Home,
 })
-
 function Home() {
   const trpc = useTRPC()
   const usersQuery = useSuspenseQuery(trpc.user.users.queryOptions())
