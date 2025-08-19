@@ -38,7 +38,7 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ['dist/', 'src/api/', 'src/routeTree.gen.ts'],
+    ignores: ['dist/', 'src/api/', 'src/routeTree.gen.ts', 'types'],
   },
   {
     // To generate oxlint
