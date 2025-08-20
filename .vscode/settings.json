@@ -32,13 +32,7 @@
   "[css]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "cSpell.words": [
-    "Continuar",
-    "gcapi",
-    "klavi",
-    "oxlint",
-    "Statsig"
-  ],
+  "cSpell.words": ["Continuar", "gcapi", "klavi", "orpc", "Orpc", "oxlint", "Statsig"],
   "files.watcherExclude": {
     "**/routeTree.gen.ts": true
   },
@@ -50,6 +44,5 @@
   },
   "typescript.suggest.paths": true,
   "javascript.suggest.paths": true,
-  "json.suggest.enabled": true,
-
+  "json.suggest.enabled": true
 }

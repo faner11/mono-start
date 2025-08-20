@@ -1,11 +1,10 @@
-import { trpcRouter } from '#comm'
+import type { RouterClient } from '@orpc/server'
+import { os } from '@orpc/server'
 
 import { usersRouter } from './user'
 
-export { fetchRequestHandler } from '@trpc/server/adapters/fetch'
-
-export const trpcAppRouter = trpcRouter({
+export const orpcAppRouter = os.router({
   user: usersRouter,
 })
 
-export type TrpcAppRouter = typeof trpcAppRouter
+export type OrpcAppRouter = RouterClient<typeof orpcAppRouter>

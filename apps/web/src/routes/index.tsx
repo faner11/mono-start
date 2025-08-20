@@ -1,16 +1,15 @@
 import { useMutation, useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
 
-import { useTRPC } from '#comm'
+import { orpcClient } from '#comm'
 
 export const Route = createFileRoute('/')({
   component: Home,
 })
 function Home() {
-  const trpc = useTRPC()
-  const usersQuery = useSuspenseQuery(trpc.user.users.queryOptions())
+  const usersQuery = useSuspenseQuery(orpcClient.user.findUsers.queryOptions())
   const addUserMutation = useMutation(
-    trpc.user.addUser.mutationOptions({
+    orpcClient.user.addUser.mutationOptions({
       onSuccess: async (data) => {
         console.info('onSuccess', data)
         await usersQuery.refetch()

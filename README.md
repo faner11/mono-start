@@ -6,7 +6,7 @@ Clone and start coding - batteries included.
 This project is built using the following technology stack:
 
 - [@tanstack/start](https://tanstack.com/start/latest).
-- [trpc](https://trpc.io/)
+- [orpc](https://orpc.unnoq.com/)
 - [prisma](https://www.prisma.io/)
 - [zod](https://zod.dev/)
 - [React](https://reactjs.org/)

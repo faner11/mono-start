@@ -1,1 +1,1 @@
-export { publicProcedure, trpcRouter } from './trpc'
+export { authedOrpc } from './orpc'
