@@ -1,28 +1,20 @@
-import { serve } from '@hono/node-server'
+import { RPCHandler } from '@orpc/server/fetch'
+import { H3, serve } from 'h3'
 
-import app from './app'
+import { orpcAppRouter } from './routers'
 
-const server = serve(
-  {
-    fetch: app.fetch,
-    port: 5174,
-  },
-  () => {
-    console.info('Server is running on http://localhost:5174')
-  },
-)
+export const app = new H3()
 
-// graceful shutdown
-process.on('SIGINT', () => {
-  server.close()
-  process.exit(0)
-})
-process.on('SIGTERM', () => {
-  server.close((error) => {
-    if (error) {
-      console.error(error)
-      process.exit(1)
-    }
-    process.exit(0)
+const handler = new RPCHandler(orpcAppRouter)
+
+app.use('/api/orpc/**', async (event) => {
+  const { matched, response } = await handler.handle(event.req, {
+    prefix: '/api/orpc',
   })
+
+  if (matched) {
+    return response
+  }
 })
+
+serve(app, { port: 5174 })
