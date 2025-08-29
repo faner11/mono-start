@@ -2,9 +2,7 @@
   "extends": "@total-typescript/tsconfig/bundler/no-dom/library-monorepo",
   "include": ["src", "./eslint.config.js", "drizzle.config.ts"],
   "compilerOptions": {
-    "composite": true,
-    "noEmit": false,
-    "outDir": "./dist",
-    "emitDeclarationOnly": true
+    "composite": false,
+    "noEmit": true
   }
 }
