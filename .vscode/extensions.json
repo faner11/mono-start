@@ -9,8 +9,7 @@
     "biomejs.biome",
     "gruntfuggly.todo-tree",
     "oxc.oxc-vscode",
-    "prisma.prisma",
     "vitest.explorer",
-    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker"
   ]
 }

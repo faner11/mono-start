@@ -16,7 +16,6 @@ function Home() {
       },
     }),
   )
-
   return (
     <div>
       <button
@@ -25,10 +24,20 @@ function Home() {
           addUserMutation.mutate({
             email: `${Date.now().toString()}@example.com`,
             gender: 'Man',
+            name: 'test',
+            age: 10,
           })
         }}
       >
-        button
+        add item
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          void usersQuery.refetch()
+        }}
+      >
+        refetch
       </button>
       {usersQuery.data.map((user) => (
         <div key={user.id}>

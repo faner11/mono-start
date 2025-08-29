@@ -7,7 +7,7 @@ This project is built using the following technology stack:
 
 - [@tanstack/start](https://tanstack.com/start/latest).
 - [orpc](https://orpc.unnoq.com/)
-- [prisma](https://www.prisma.io/)
+- [drizzle orm](https://orm.drizzle.team/)
 - [zod](https://zod.dev/)
 - [React](https://reactjs.org/)
 

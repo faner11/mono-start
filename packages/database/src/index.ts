@@ -1,3 +1,2 @@
-export { prisma } from './client'
-export * from './generated/prisma/enums'
-export * from './generated/prisma/models'
+export * from './enum'
+export * from './schema'

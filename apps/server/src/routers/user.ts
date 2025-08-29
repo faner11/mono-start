@@ -1,7 +1,7 @@
-import { GenderEnum, prisma } from '@repo/db'
+import { genderEnum, usersTable } from '@repo/db'
 import { z } from 'zod/v4'
 
-import { authedOrpc } from '#comm'
+import { authedOrpc, database } from '#comm'
 
 export const usersRouter = {
   findUsers: authedOrpc
@@ -9,22 +9,29 @@ export const usersRouter = {
       method: 'GET',
     })
     .handler(async () => {
-      return await prisma.user.findMany()
+      return await database.query.usersTable.findMany({
+        limit: 10,
+        orderBy(fields, operators) {
+          return [operators.desc(fields.id)]
+        },
+      })
     }),
   addUser: authedOrpc
     .input(
       z.object({
         email: z.string(),
-        gender: z.enum(GenderEnum),
+        gender: z.enum(genderEnum.enumValues),
+        name: z.string(),
+        age: z.number(),
       }),
     )
     .handler(async ({ input }) => {
-      const { email, gender } = input
-      return await prisma.user.create({
-        data: {
-          email,
-          gender,
-        },
+      const { email, gender, name, age } = input
+      await database.insert(usersTable).values({
+        email,
+        name,
+        age,
+        gender,
       })
     }),
 }
