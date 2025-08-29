@@ -29,7 +29,7 @@ pnpm i
 ```bash
 # Create the postgresql database
 pnpm run db:push
-
+```
 ### DEV
 ```bash
 pnpm dev
