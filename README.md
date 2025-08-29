@@ -1,48 +1,34 @@
 # Mono Start
 A streamlined full-stack template with traditional SPA + API architecture built on Tanstack, engineered for accelerated development
 
+Not everyone needs SSR, this template is dedicated to developers who only need SAP
+
 Clone and start coding - batteries included.
 
 This project is built using the following technology stack:
 
-- [@tanstack/start](https://tanstack.com/start/latest).
+- [@tanstack/router](https://tanstack.com/router/latest).
 - [orpc](https://orpc.unnoq.com/)
 - [drizzle orm](https://orm.drizzle.team/)
 - [zod](https://zod.dev/)
-- [React](https://reactjs.org/)
+- [react](https://reactjs.org/)
 
-## React or Vue or Other
-Because this project is based on [@tanstack/start](https://tanstack.com/start/latest), it only supports the front-end frameworks supported by `@tanstack/start`.
 ## Getting Started
 ### env
 ```
 cp .env.example .env
 ```
+Set your DATABASE_URL, default is postgresql
 
 ### install
 
 ```bash
 pnpm i
 ```
-### prisma db provider
-To facilitate quick start, SQLite is used by default. You need to initialize the SQLite database before starting.
-
-If you use sqlite, please change DATABASE_URL in `.env` to your own absolute address
 
 ```bash
-# Create the SQLite database
+# Create the postgresql database
 pnpm run db:push
-# Generate the Prisma client
-pnpm run db:generate
-```
-If you want to use another database, you can modify the database connection string in `prisma/schema.prisma`.
-```prisma
-// prisma/schema.prisma
-datasource db {
-  provider = "postgres" 
-  url      = env("DATABASE_URL")
-}
-```
 
 ### DEV
 ```bash
