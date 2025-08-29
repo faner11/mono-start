@@ -9,7 +9,7 @@
     "lint": "oxlint . && turbo lint",
     "check-type": "turbo check-type",
     "db:push": "dotenvx run -- turbo -F @repo/db db:push",
-    "db:generate": "turbo -F @repo/db db:generate",
+    "db:generate": "dotenvx run -- turbo -F @repo/db db:generate",
     "db:migrate": "dotenvx run -- turbo -F @repo/db db:migrate"
   },
   "author": "Bob",
