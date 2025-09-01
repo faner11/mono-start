@@ -17,18 +17,18 @@
   "description": "",
   "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac",
   "devDependencies": {
-    "@biomejs/biome": "^2.2.0",
+    "@biomejs/biome": "^2.2.2",
     "@dotenvx/dotenvx": "^1.49.0",
     "@repo/eslint-config": "workspace:*",
     "@total-typescript/tsconfig": "^1.0.4",
     "@types/node": "^24.3.0",
-    "eslint": "^9.33.0",
-    "oxlint": "^1.12.0",
-    "tsdown": "^0.14.1",
+    "eslint": "^9.34.0",
+    "oxlint": "^1.14.0",
+    "tsdown": "^0.14.2",
     "turbo": "^2.5.6",
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "zod": "^4.0.17"
+    "zod": "^4.1.5"
   }
 }
