@@ -9,7 +9,10 @@
     "lint": "eslint .",
     "check-type": "tsc -b"
   },
-  "main": "./src/index.ts",
+  "exports": {
+    "./schema": "./src/schema.ts",
+    "./enums": "./src/enums.ts"
+  },
   "devDependencies": {
     "drizzle-kit": "^0.31.4"
   },

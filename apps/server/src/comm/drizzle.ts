@@ -1,4 +1,4 @@
-import * as schema from '@repo/db'
+import * as schema from '@repo/db/schema'
 import { drizzle } from 'drizzle-orm/node-postgres'
 
 if (process.env.DATABASE_URL === undefined) {

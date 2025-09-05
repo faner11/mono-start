@@ -8,7 +8,7 @@ const link = new RPCLink({
   headers: () => ({
     authorization: 'Bearer token',
   }),
-  method: (properties, path) => {
+  method: (_properties, path) => {
     // Use GET for read-like operations
     if (path.at(-1)?.match(/^(?:get|find|list|search)(?:[A-Z].*)?$/)) {
       return 'GET'

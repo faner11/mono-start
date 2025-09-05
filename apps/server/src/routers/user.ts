@@ -1,4 +1,5 @@
-import { genderEnum, usersTable } from '@repo/db'
+import { GenderEnum } from '@repo/db/enums'
+import { usersTable } from '@repo/db/schema'
 import { z } from 'zod/v4'
 
 import { authedOrpc, database } from '#comm'
@@ -20,7 +21,7 @@ export const usersRouter = {
     .input(
       z.object({
         email: z.string(),
-        gender: z.enum(genderEnum.enumValues),
+        gender: z.enum(GenderEnum),
         name: z.string(),
         age: z.number(),
       }),

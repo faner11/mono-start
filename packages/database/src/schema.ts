@@ -1,6 +1,9 @@
 import { integer, pgTable, varchar } from 'drizzle-orm/pg-core'
+import { pgEnum } from 'drizzle-orm/pg-core'
 
-import { genderEnum } from './enum'
+import { GenderEnumValues } from './enums'
+
+const genderEnum = pgEnum('genderEnum', GenderEnumValues)
 
 export const usersTable = pgTable('users', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
