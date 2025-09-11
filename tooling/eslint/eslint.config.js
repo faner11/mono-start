@@ -1,13 +1,13 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import eslint from '@eslint/js'
+import { defineConfig } from 'eslint/config'
 import oxlint from 'eslint-plugin-oxlint'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import tseslint from 'typescript-eslint'
 
-/** @type {import('eslint').Linter.Config[]} */
-export default tseslint.config(
+export default defineConfig(
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
