@@ -1,11 +1,9 @@
 import esLintConfig from '@repo/eslint-config'
+import { drizzleEslintConfig } from '@repo/eslint-config/drizzle'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- * @see https://eslint.org/docs/user-guide/configuring
- */
 export default [
   ...esLintConfig,
+  ...drizzleEslintConfig,
   {
     ignores: ['.vinxi', '.output'],
   },

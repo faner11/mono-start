@@ -123,6 +123,9 @@ importers:
       '@eslint/js':
         specifier: ^9.35.0
         version: 9.35.0
+      eslint-plugin-drizzle:
+        specifier: ^0.2.3
+        version: 0.2.3(eslint@9.35.0(jiti@2.5.1))
       eslint-plugin-oxlint:
         specifier: ^1.14.0
         version: 1.14.0
@@ -1524,6 +1527,11 @@ packages:
   escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+
+  eslint-plugin-drizzle@0.2.3:
+    resolution: {integrity: sha512-BO+ymHo33IUNoJlC0rbd7HP9EwwpW4VIp49R/tWQF/d2E1K2kgTf0tCXT0v9MSiBr6gGR1LtPwMLapTKEWSg9A==}
+    peerDependencies:
+      eslint: '>=8.0.0'
 
   eslint-plugin-oxlint@1.14.0:
     resolution: {integrity: sha512-0sRuw9X/2W9FsWis6RC46fpCOSu+yPFD9foEmJ0ypCE6XfFWO6qXJIYvNctE7QzkO8W8c2RcWP7G28Rl84dDpQ==}
@@ -3813,6 +3821,10 @@ snapshots:
   escape-string-regexp@1.0.5: {}
 
   escape-string-regexp@4.0.0: {}
+
+  eslint-plugin-drizzle@0.2.3(eslint@9.35.0(jiti@2.5.1)):
+    dependencies:
+      eslint: 9.35.0(jiti@2.5.1)
 
   eslint-plugin-oxlint@1.14.0:
     dependencies:
