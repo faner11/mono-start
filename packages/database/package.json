@@ -14,9 +14,9 @@
     "./enums": "./src/enums.ts"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.31.4"
+    "drizzle-kit": "^0.31.5"
   },
   "dependencies": {
-    "drizzle-orm": "^0.44.5"
+    "drizzle-orm": "^0.44.6"
   }
 }
