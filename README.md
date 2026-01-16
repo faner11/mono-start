@@ -1,4 +1,5 @@
 # Mono Start
+
 A streamlined full-stack template with traditional SPA + API architecture built on Tanstack, engineered for accelerated development
 
 Not everyone needs SSR, this template is dedicated to developers who only need SAP
@@ -14,10 +15,13 @@ This project is built using the following technology stack:
 - [react](https://reactjs.org/)
 
 ## Getting Started
+
 ### env
+
 ```
 cp .env.example .env
 ```
+
 Set your DATABASE_URL, default is postgresql
 
 ### install
@@ -30,11 +34,15 @@ pnpm i
 # Create the postgresql database
 pnpm run db:push
 ```
+
 ### DEV
+
 ```bash
 pnpm dev
 ```
+
 ### BUILD
+
 ```bash
 pnpm build
 ```

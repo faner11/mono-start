@@ -1,10 +1,27 @@
+import { authedOrpc, database } from '#comm'
 import { GenderEnum } from '@repo/db/enums'
 import { usersTable } from '@repo/db/schema'
 import { z } from 'zod/v4'
 
-import { authedOrpc, database } from '#comm'
-
 export const usersRouter = {
+  addUser: authedOrpc
+    .input(
+      z.object({
+        age: z.number(),
+        email: z.string(),
+        gender: z.enum(GenderEnum),
+        name: z.string(),
+      }),
+    )
+    .handler(async ({ input }) => {
+      const { age, email, gender, name } = input
+      await database.insert(usersTable).values({
+        age,
+        email,
+        gender,
+        name,
+      })
+    }),
   findUsers: authedOrpc
     .route({
       method: 'GET',
@@ -15,24 +32,6 @@ export const usersRouter = {
         orderBy(fields, operators) {
           return [operators.desc(fields.id)]
         },
-      })
-    }),
-  addUser: authedOrpc
-    .input(
-      z.object({
-        email: z.string(),
-        gender: z.enum(GenderEnum),
-        name: z.string(),
-        age: z.number(),
-      }),
-    )
-    .handler(async ({ input }) => {
-      const { email, gender, name, age } = input
-      await database.insert(usersTable).values({
-        email,
-        name,
-        age,
-        gender,
       })
     }),
 }

@@ -1,8 +1,8 @@
 import { defineConfig } from 'tsdown'
 
 export default defineConfig({
-  entry: ['src/main.ts'],
   dts: false,
+  entry: ['src/main.ts'],
   noExternal: [/^@repo\/.*/],
   sourcemap: true,
 })

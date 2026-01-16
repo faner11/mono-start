@@ -2,6 +2,10 @@
   "name": "@repo/db",
   "version": "0.0.0",
   "type": "module",
+  "exports": {
+    "./schema": "./src/schema.ts",
+    "./enums": "./src/enums.ts"
+  },
   "scripts": {
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
@@ -9,14 +13,10 @@
     "lint": "eslint .",
     "check-type": "tsc -b"
   },
-  "exports": {
-    "./schema": "./src/schema.ts",
-    "./enums": "./src/enums.ts"
-  },
-  "devDependencies": {
-    "drizzle-kit": "^0.31.5"
-  },
   "dependencies": {
     "drizzle-orm": "^0.44.6"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.8"
   }
 }

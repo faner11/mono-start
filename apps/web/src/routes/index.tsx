@@ -1,7 +1,6 @@
+import { orpcClient } from '#comm'
 import { useMutation, useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
-
-import { orpcClient } from '#comm'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -19,23 +18,23 @@ function Home() {
   return (
     <div>
       <button
-        type="button"
         onClick={() => {
           addUserMutation.mutate({
+            age: 10,
             email: `${Date.now().toString()}@example.com`,
             gender: 'Man',
             name: 'test',
-            age: 10,
           })
         }}
+        type="button"
       >
         add item
       </button>
       <button
-        type="button"
         onClick={() => {
           void usersQuery.refetch()
         }}
+        type="button"
       >
         refetch
       </button>

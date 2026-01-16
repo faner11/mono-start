@@ -1,10 +1,10 @@
+import type { OrpcAppRouter } from '@repo/server'
+
 import { createORPCClient } from '@orpc/client'
 import { RPCLink } from '@orpc/client/fetch'
 import { createTanstackQueryUtils } from '@orpc/tanstack-query'
-import type { OrpcAppRouter } from '@repo/server'
 
 const link = new RPCLink({
-  url: `${location.origin}/api/orpc`,
   headers: () => ({
     authorization: 'Bearer token',
   }),
@@ -15,6 +15,7 @@ const link = new RPCLink({
     }
     return 'POST'
   },
+  url: `${location.origin}/api/orpc`,
 })
 const originalClient: OrpcAppRouter = createORPCClient(link)
 

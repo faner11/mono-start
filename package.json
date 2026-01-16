@@ -1,6 +1,9 @@
 {
   "name": "mono-start",
   "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "Bob",
   "type": "module",
   "scripts": {
     "check": "pnpm run lint && biome check",
@@ -10,25 +13,24 @@
     "check-type": "turbo check-type",
     "db:push": "dotenvx run -- turbo -F @repo/db db:push",
     "db:generate": "dotenvx run -- turbo -F @repo/db db:generate",
-    "db:migrate": "dotenvx run -- turbo -F @repo/db db:migrate"
-  },
-  "author": "Bob",
-  "license": "MIT",
-  "description": "",
-  "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67",
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.6",
-    "@dotenvx/dotenvx": "^1.51.0",
-    "@repo/eslint-config": "workspace:*",
-    "@total-typescript/tsconfig": "^1.0.4",
-    "@types/node": "^24.7.2",
-    "eslint": "^9.37.0",
-    "oxlint": "^1.23.0",
-    "tsdown": "^0.15.7",
-    "turbo": "^2.5.8",
-    "typescript": "^5.9.3"
+    "db:migrate": "dotenvx run -- turbo -F @repo/db db:migrate",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "dependencies": {
-    "zod": "^4.1.12"
-  }
+    "zod": "^4.3.5"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.51.4",
+    "@repo/eslint-config": "workspace:*",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/node": "^25.0.9",
+    "eslint": "^9.39.2",
+    "oxfmt": "^0.24.0",
+    "oxlint": "^1.39.0",
+    "tsdown": "0.20.0-beta.3",
+    "turbo": "^2.7.4",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
 }

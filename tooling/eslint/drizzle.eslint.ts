@@ -1,7 +1,7 @@
-import { defineConfig } from 'eslint/config'
 // oxlint-disable-next-line ban-ts-comment
 //@ts-expect-error
 import * as drizzlePlugin from 'eslint-plugin-drizzle'
+import { defineConfig } from 'eslint/config'
 export const drizzleEslintConfig = defineConfig({
   plugins: {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

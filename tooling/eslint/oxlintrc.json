@@ -211,8 +211,6 @@
     "unicorn/switch-case-braces": "error",
     "unicorn/text-encoding-identifier-case": "error",
     "unicorn/throw-new-error": "error",
-    "import/consistent-type-specifier-style": "error",
-    "import/no-empty-named-blocks": "error",
     "react/no-array-index-key": "error",
     "react/button-has-type": "error",
     "react/no-danger": "error",
@@ -220,7 +218,10 @@
     "react/jsx-no-useless-fragment": "error",
     "react/self-closing-comp": "error",
     "react/jsx-boolean-value": "error",
-    "react/jsx-curly-brace-presence": "error"
+    "react/jsx-curly-brace-presence": "error",
+    "typescript/consistent-type-imports": "error",
+    "import/no-empty-named-blocks": "error",
+    "import/no-duplicates": "error"
   },
   "ignorePatterns": ["dist/", "src/api/", "routeTree.gen.ts"]
 }

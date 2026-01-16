@@ -1,7 +1,13 @@
 {
   "name": "@repo/web",
   "version": "1.0.0",
+  "description": "",
   "type": "module",
+  "imports": {
+    "#util": "./src/util/index.ts",
+    "#comm": "./src/comm/index.ts",
+    "#components": "./src/components/index.ts"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -9,26 +15,20 @@
     "lint": "eslint .",
     "check-type": "tsc -b"
   },
-  "description": "",
-  "imports": {
-    "#util": "./src/util/index.ts",
-    "#comm": "./src/comm/index.ts",
-    "#components": "./src/components/index.ts"
-  },
   "dependencies": {
-    "@orpc/client": "^1.9.4",
-    "@orpc/tanstack-query": "^1.9.4",
+    "@orpc/client": "^1.13.4",
+    "@orpc/tanstack-query": "^1.13.4",
     "@repo/server": "workspace:*",
-    "@tanstack/react-query": "^5.90.3",
-    "@tanstack/react-router": "^1.133.3",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "@tanstack/react-query": "^5.90.17",
+    "@tanstack/react-router": "^1.150.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "@tanstack/router-plugin": "^1.133.3",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "@vitejs/plugin-react-oxc": "^0.4.2",
+    "@tanstack/router-plugin": "^1.150.0",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react-oxc": "^0.4.3",
     "vite": "npm:rolldown-vite@latest"
   }
 }
