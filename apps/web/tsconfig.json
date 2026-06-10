@@ -1,5 +1,5 @@
 {
-  "extends": ["@tsconfig/vite-react/tsconfig.json", "@tsconfig/vite-react/tsconfig.json"],
+  "extends": ["@tsconfig/vite-react/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
   "exclude": ["dist", "node_modules"],
   "include": ["**/*.ts", "**/*.tsx", "eslint.config.ts"],
   "references": [

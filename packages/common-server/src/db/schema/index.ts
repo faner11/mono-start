@@ -1,4 +1,5 @@
-import { integer, pgEnum, pgTable,varchar } from 'drizzle-orm/pg-core'
+import { defineRelations } from 'drizzle-orm'
+import { integer, pgEnum, pgTable, varchar } from 'drizzle-orm/pg-core'
 
 import { GenderEnumValues } from './enums'
 
@@ -11,3 +12,5 @@ export const usersTable = pgTable('users', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   name: varchar({ length: 255 }).notNull(),
 })
+
+export const relations = defineRelations({ usersTable })

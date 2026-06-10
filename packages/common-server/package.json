@@ -1,10 +1,9 @@
 {
-  "name": "@repo/db",
+  "name": "@repo/common-server",
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./schema": "./src/schema.ts",
-    "./enums": "./src/enums.ts"
+    "./db": "./src/db/index.ts"
   },
   "scripts": {
     "db:push": "drizzle-kit push",
@@ -14,9 +13,9 @@
     "check-type": "tsgo -b"
   },
   "dependencies": {
-    "drizzle-orm": "^0.45.2"
+    "drizzle-orm": "^1.0.0-rc.3"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.31.10"
+    "drizzle-kit": "^1.0.0-rc.3"
   }
 }

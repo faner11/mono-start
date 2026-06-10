@@ -1,5 +1,4 @@
-import type { OrpcAppRouter } from '@repo/server'
-
+import type { OrpcAppRouter } from '@app/server'
 import { createORPCClient } from '@orpc/client'
 import { RPCLink } from '@orpc/client/fetch'
 import { createTanstackQueryUtils } from '@orpc/tanstack-query'

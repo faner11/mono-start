@@ -1,5 +1,4 @@
 import type { RouterClient } from '@orpc/server'
-
 import { os } from '@orpc/server'
 
 import { usersRouter } from './user'

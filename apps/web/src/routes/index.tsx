@@ -1,6 +1,7 @@
-import { orpcClient } from '#comm'
 import { useMutation, useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
+
+import { orpcClient } from '#comm'
 
 export const Route = createFileRoute('/')({
   component: Home,

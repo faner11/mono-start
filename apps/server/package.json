@@ -1,5 +1,5 @@
 {
-  "name": "@repo/server",
+  "name": "@app/server",
   "version": "0.0.1",
   "description": "",
   "type": "module",
@@ -9,7 +9,7 @@
     "#comm": "./src/comm/index.ts"
   },
   "scripts": {
-    "dev": "tsdown -w --onSuccess 'tsc -b && node --enable-source-maps dist/main.js'",
+    "dev": "concurrently 'node --import @oxc-node/core/register --watch ./src/main.ts' 'tsgo -b tsconfig.app.json -w'",
     "build": "tsgo -b && tsdown",
     "build:type": "tsgo -b tsconfig.build.json",
     "lint": "eslint .",
@@ -18,11 +18,12 @@
   "dependencies": {
     "@hono/node-server": "^2.0.4",
     "@orpc/server": "^1.14.5",
-    "@repo/db": "workspace:*",
+    "@repo/common-server": "workspace:*",
     "@tanstack/query-core": "^5.101.0",
     "better-auth": "^1.6.15",
-    "drizzle-orm": "^0.45.2",
-    "hono": "^4.12.25"
+    "drizzle-orm": "^1.0.0-rc.3",
+    "hono": "^4.12.25",
+    "register": "link:@oxc-node/core/register"
   },
   "devDependencies": {
     "@types/pg": "^8.20.0"

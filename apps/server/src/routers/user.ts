@@ -1,7 +1,7 @@
-import { authedOrpc, database } from '#comm'
-import { GenderEnum } from '@repo/db/enums'
-import { usersTable } from '@repo/db/schema'
+import { GenderEnum, usersTable, drizzleDb } from '@repo/common-server/db'
 import { z } from 'zod/v4'
+
+import { authedOrpc } from '#comm'
 
 export const usersRouter = {
   addUser: authedOrpc
@@ -15,19 +15,22 @@ export const usersRouter = {
     )
     .handler(async ({ input }) => {
       const { age, email, gender, name } = input
-      await database.insert(usersTable).values({
-        age,
-        email,
-        gender,
-        name,
-      })
+      await drizzleDb
+        .insert(usersTable)
+        .values({
+          age,
+          email,
+          gender,
+          name,
+        })
+        .returning()
     }),
   findUsers: authedOrpc
     .route({
       method: 'GET',
     })
     .handler(async () => {
-      return await database.query.usersTable.findMany({
+      return await drizzleDb.query.usersTable.findMany({
         limit: 10,
         orderBy(fields, operators) {
           return [operators.desc(fields.id)]
