@@ -10,20 +10,21 @@
   },
   "scripts": {
     "dev": "tsdown -w --onSuccess 'tsc -b && node --enable-source-maps dist/main.js'",
-    "build": "tsc -b && tsdown",
-    "build:type": "tsc -b tsconfig.build.json",
+    "build": "tsgo -b && tsdown",
+    "build:type": "tsgo -b tsconfig.build.json",
     "lint": "eslint .",
-    "check-type": "tsc -b --noEmit"
+    "check-type": "tsgo -b --noEmit"
   },
   "dependencies": {
-    "@orpc/server": "^1.13.4",
+    "@hono/node-server": "^2.0.4",
+    "@orpc/server": "^1.14.5",
     "@repo/db": "workspace:*",
-    "@tanstack/query-core": "^5.90.17",
-    "better-auth": "^1.4.13",
-    "drizzle-orm": "^0.44.6",
-    "h3": "2.0.1-rc.8"
+    "@tanstack/query-core": "^5.101.0",
+    "better-auth": "^1.6.15",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.25"
   },
   "devDependencies": {
-    "@types/pg": "^8.16.0"
+    "@types/pg": "^8.20.0"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": "./eslint.config.ts",
+    "./drizzle": "./drizzle.eslint.ts",
+    "./oxlint": "./oxlint-config.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "check-type": "tsgo -b --noEmit"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint-plugin-drizzle": "^1.0.0-rc.4-5d5b77c",
+    "eslint-plugin-oxlint": "^1.69.0",
+    "eslint-plugin-unicorn": "^65.0.1",
+    "typescript-eslint": "^8.61.0"
+  }
+}

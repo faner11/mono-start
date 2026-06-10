@@ -1,11 +1,7 @@
 {
-  "extends": "@total-typescript/tsconfig/bundler/dom/app",
+  "extends": ["@tsconfig/vite-react/tsconfig.json", "@tsconfig/vite-react/tsconfig.json"],
   "exclude": ["dist", "node_modules"],
   "include": ["**/*.ts", "**/*.tsx", "eslint.config.ts"],
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "types": []
-  },
   "references": [
     {
       "path": "../server/tsconfig.json"

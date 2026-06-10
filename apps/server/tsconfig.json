@@ -1,5 +1,5 @@
 {
-  "extends": "@total-typescript/tsconfig/bundler/no-dom/app",
+  "extends": ["@tsconfig/bun/tsconfig.json", "@tsconfig/node-ts/tsconfig.json"],
   "exclude": ["dist", "node_modules", "types"],
   "include": ["."],
   "compilerOptions": {
@@ -8,6 +8,7 @@
     "outDir": "./types",
     "declarationMap": true,
     "erasableSyntaxOnly": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "types": ["node"]
   }
 }

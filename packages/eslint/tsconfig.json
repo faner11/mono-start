@@ -1,9 +1,7 @@
 {
   "extends": ["@tsconfig/bun/tsconfig.json", "@tsconfig/node-ts/tsconfig.json"],
-  "include": ["src", "eslint.config.ts", "drizzle.config.ts"],
+  "include": ["eslint.config.ts", "drizzle.eslint.ts", "scripts/*"],
   "compilerOptions": {
-    "composite": false,
-    "noEmit": true,
     "types": ["node"]
   }
 }

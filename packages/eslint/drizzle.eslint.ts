@@ -4,8 +4,7 @@ import * as drizzlePlugin from 'eslint-plugin-drizzle'
 import { defineConfig } from 'eslint/config'
 export const drizzleEslintConfig = defineConfig({
   plugins: {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    drizzle: drizzlePlugin,
+    drizzle: drizzlePlugin as never,
   },
   rules: {
     'drizzle/enforce-delete-with-where': [
