@@ -16,6 +16,7 @@
     "drizzle-orm": "^1.0.0-rc.3"
   },
   "devDependencies": {
+    "@types/pg": "^8.20.0",
     "drizzle-kit": "^1.0.0-rc.3"
   }
 }

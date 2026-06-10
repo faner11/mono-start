@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "concurrently 'node --import @oxc-node/core/register --watch ./src/main.ts' 'tsgo -b tsconfig.app.json -w'",
-    "build": "tsgo -b && tsdown",
+    "start": "node --import @oxc-node/core/register ./src/main.ts",
     "build:type": "tsgo -b tsconfig.build.json",
     "lint": "eslint .",
     "check-type": "tsgo -b --noEmit"
@@ -24,8 +24,5 @@
     "drizzle-orm": "^1.0.0-rc.3",
     "hono": "^4.12.25",
     "register": "link:@oxc-node/core/register"
-  },
-  "devDependencies": {
-    "@types/pg": "^8.20.0"
   }
 }
