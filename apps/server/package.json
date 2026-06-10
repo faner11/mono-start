@@ -22,7 +22,9 @@
     "@tanstack/query-core": "^5.101.0",
     "better-auth": "^1.6.15",
     "drizzle-orm": "^1.0.0-rc.3",
-    "hono": "^4.12.25",
-    "register": "link:@oxc-node/core/register"
+    "hono": "^4.12.25"
+  },
+  "devDependencies": {
+    "@oxc-node/core": "^0.1.0"
   }
 }
