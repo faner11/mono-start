@@ -1,12 +1,13 @@
 import { drizzle } from 'drizzle-orm/node-postgres'
 
-import * as dbSchema from './schema'
+import { relations } from './schema'
 
 export const drizzleDb = drizzle({
   connection: {
     connectionString: process.env.DATABASE_URL,
   },
-  relations: dbSchema.relations,
+  relations,
 })
-export * from './schema'
+
+export { relations as tableRelations } from './schema'
 export * from './schema/enums'

@@ -1,4 +1,4 @@
-import { GenderEnum, usersTable, drizzleDb } from '@repo/common-server/db'
+import { GenderEnum, tableRelations, drizzleDb } from '@repo/common-server/db'
 import { z } from 'zod/v4'
 
 import { authedOrpc } from '#comm'
@@ -16,7 +16,7 @@ export const usersRouter = {
     .handler(async ({ input }) => {
       const { age, email, gender, name } = input
       await drizzleDb
-        .insert(usersTable)
+        .insert(tableRelations.usersTable.table)
         .values({
           age,
           email,

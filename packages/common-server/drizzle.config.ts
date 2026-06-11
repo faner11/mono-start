@@ -8,5 +8,5 @@ export default defineConfig({
   },
   dialect: 'postgresql',
   out: './drizzle',
-  schema: ['./src/db/schema/index.ts', './src/db/schema/enum.ts'],
+  schema: ['./src/db/schema/index.ts', './src/db/schema/enums.ts'],
 })
