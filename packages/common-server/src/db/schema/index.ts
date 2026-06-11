@@ -3,7 +3,7 @@ import { integer, pgEnum, pgTable, varchar } from 'drizzle-orm/pg-core'
 
 import { GenderEnumValues } from './enums'
 
-const genderEnum = pgEnum('genderEnum', GenderEnumValues)
+export const genderEnum = pgEnum('genderEnum', GenderEnumValues)
 
 export const usersTable = pgTable('users', {
   age: integer().notNull(),

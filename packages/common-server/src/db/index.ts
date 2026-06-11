@@ -4,7 +4,7 @@ import * as dbSchema from './schema'
 
 export const drizzleDb = drizzle({
   connection: {
-    connectionString: process.env.DB,
+    connectionString: process.env.DATABASE_URL,
   },
   relations: dbSchema.relations,
 })

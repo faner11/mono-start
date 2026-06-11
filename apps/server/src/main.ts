@@ -6,14 +6,15 @@ import { orpcAppRouter } from './routers'
 
 const handler = new RPCHandler(orpcAppRouter)
 const app = new Hono()
-app.use('/api/orpc/**', async (event) => {
-  const { matched, response } = await handler.handle(event.req.raw, {
+app.use('/api/orpc/**', async (c, next) => {
+  const { matched, response } = await handler.handle(c.req.raw, {
     prefix: '/api/orpc',
   })
 
   if (matched) {
-    return response
+    return c.newResponse(response.body, response)
   }
+  await next()
 })
 
 const server = serve(
