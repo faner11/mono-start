@@ -11,9 +11,10 @@
     "build": "turbo build",
     "lint": "oxlint && turbo lint",
     "check-type": "turbo check-type",
-    "db:push": "dotenvx run -- turbo -F @repo/common-server db:push",
-    "db:generate": "dotenvx run -- turbo -F @repo/common-server db:generate",
-    "db:migrate": "dotenvx run -- turbo -F @repo/common-server db:migrate",
+    "db:push": "dotenvx run -- pnpm --filter @repo/common-server db:push",
+    "db:generate": "dotenvx run -- pnpm --filter @repo/common-server db:generate",
+    "db:migrate": "dotenvx run -- pnpm --filter @repo/common-server db:migrate",
+    "auth-db:generate": "dotenvx run -- pnpm --filter @repo/common-server auth-db:generate",
     "fmt": "oxfmt",
     "prepare": "husky"
   },

@@ -3,16 +3,20 @@
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./db": "./src/db/index.ts"
+    "./db": "./src/db/index.ts",
+    "./auth": "./src/utils/auth.ts"
   },
   "scripts": {
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
+    "auth-db:generate": "pnpx auth@latest generate --output src/db/schema/auth-schema.ts",
     "lint": "eslint .",
     "check-type": "tsgo -b"
   },
   "dependencies": {
+    "@better-auth/drizzle-adapter": "^1.6.16",
+    "better-auth": "^1.6.16",
     "drizzle-orm": "^1.0.0-rc.3",
     "pg": "^8.21.0"
   },

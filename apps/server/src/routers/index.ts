@@ -1,9 +1,10 @@
 import type { RouterClient } from '@orpc/server'
-import { os } from '@orpc/server'
+
+import { authedOrpc } from '#comm'
 
 import { usersRouter } from './user'
 
-export const orpcAppRouter = os.router({
+export const orpcAppRouter = authedOrpc.router({
   user: usersRouter,
 })
 

@@ -14,7 +14,7 @@ const link = new RPCLink({
     }
     return 'POST'
   },
-  url: `${location.origin}/api/orpc`,
+  url: `${location.origin}/api/rpc`,
 })
 const originalClient: OrpcAppRouter = createORPCClient(link)
 
