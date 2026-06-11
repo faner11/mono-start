@@ -6,7 +6,7 @@
   "author": "Bob",
   "type": "module",
   "scripts": {
-    "check": "oxfmt && pnpm run lint",
+    "check": "oxfmt && pnpm run check-type && pnpm run lint",
     "dev": "dotenvx run -- turbo dev",
     "build": "turbo build",
     "lint": "oxlint && turbo lint",
@@ -18,7 +18,6 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@tsconfig/node-ts": "^23.6.4",
     "es-toolkit": "^1.47.0",
     "zod": "^4.4.3"
   },
@@ -26,6 +25,7 @@
     "@dotenvx/dotenvx": "^1.71.2",
     "@repo/eslint-config": "workspace:*",
     "@tsconfig/bun": "^1.0.10",
+    "@tsconfig/node-ts": "^23.6.4",
     "@tsconfig/strictest": "^2.0.8",
     "@types/node": "^25.9.2",
     "@typescript/native-preview": "7.0.0-dev.20260608.1",
@@ -39,7 +39,10 @@
   },
   "lint-staged": {
     "*": "oxfmt --no-error-on-unmatched-pattern",
-    "*.{js,jsx,ts,tsx,mjs,cjs}": "pnpm run lint"
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "oxlint",
+      "eslint"
+    ]
   },
   "packageManager": "pnpm@11.5.2+sha512.71c631e382066efc25625d5cf029075de07b61b37f6e27350fbd84b1bda5864c8c1967adc280776b45c30a715c0359a3be08fef42d5bb09e2b99029979692916"
 }

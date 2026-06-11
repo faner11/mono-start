@@ -21,6 +21,7 @@
     "@repo/common-server": "workspace:*",
     "@tanstack/query-core": "^5.101.0",
     "better-auth": "^1.6.15",
+    "concurrently": "^10.0.3",
     "drizzle-orm": "^1.0.0-rc.3",
     "hono": "^4.12.25"
   },
